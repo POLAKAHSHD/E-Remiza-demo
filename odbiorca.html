@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Remiza DEMO — Odbiorca</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+}
+
+header {
+    background: #b40000;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+main {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.panel {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #bbb;
+}
+
+.alarm {
+    background: #ffe0e0;
+    border-left: 7px solid #d00000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.waiting {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+.demo {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🚒 E-REMIZA</h1>
+    <p>Odbiorca — DEMO</p>
+</header>
+
+<main>
+
+<div class="panel">
+
+    <div id="status" class="waiting">
+        📡<br><br>
+        Oczekiwanie na alarm DEMO...
+    </div>
+
+</div>
+
+<p class="demo">
+⚠️ SYSTEM DEMONSTRACYJNY — BRAK PRAWDZIWYCH WEZWAŃ
+</p>
+
+</main>
+
+<script>
+
+function pokazAlarm() {
+
+    document.getElementById("status").innerHTML = `
+        <div class="alarm">
+
+            <h2>🚨 NOWY ALARM — DEMO</h2>
+
+            <p><b>Rodzaj:</b> Pożar budynku</p>
+
+            <p><b>📍 Miejsce:</b> Miejsce testowe</p>
+
+            <p><b>🚒 Jednostka:</b> Jednostka Demo 1</p>
+
+            <p><b>🕐 Godzina:</b> ${new Date().toLocaleTimeString()}</p>
+
+            <hr>
+
+            <p>🔔 Alarm demonstracyjny został odebrany.</p>
+
+        </div>
+    `;
+
+}
+
+</script>
+
+</body>
+</html>
